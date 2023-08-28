@@ -1,0 +1,17 @@
+import time
+
+def cronometro():
+    input("Presiona Enter para iniciar el cronómetro...")
+    inicio = time.time()
+    
+    input("Presiona Enter para detener el cronómetro...")
+    fin = time.time()
+    
+    tiempo_transcurrido = fin - inicio
+    minutos, segundos = divmod(int(tiempo_transcurrido), 60)
+    horas, minutos = divmod(minutos, 60)
+    
+    print(f"Tiempo transcurrido: {horas:02d}:{minutos:02d}:{segundos:02d}")
+
+if __name__ == "__main__":
+    cronometro()
